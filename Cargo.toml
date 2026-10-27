@@ -6,7 +6,7 @@ members = ["contracts/round"]
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
-authors = ["Sub Rosa"]
+authors = ["Soroban-sub-rosa"]
 
 [workspace.dependencies]
 soroban-sdk = "22"

@@ -2,9 +2,9 @@
   <img src="./assets/sub-rosa-readme.png" width="250" alt="Sub Rosa logo" />
 </p>
 
-# Sub Rosa
+# Soroban-sub-rosa
 
-**Embeddable sealed-market infrastructure for Stellar.** Sub Rosa lets an
+**Embeddable sealed-market infrastructure for Stellar.** Soroban-sub-rosa lets an
 application collect private bids or proposals, reveal them at a publicly
 verifiable time, and either settle assets atomically or produce a canonical
 receipt for an off-chain decision.
@@ -20,13 +20,13 @@ receipt for an off-chain decision.
   <a href="https://stellar.expert/explorer/public/contract/CDQOFNCJE5Z4ZZL76DU5652FOUKJVEIZWHFGCZVWH63UYBGPSZIPC325">Mainnet contract</a>
 </p>
 
-Sub Rosa is a protocol and integration stack, not only a hosted application:
+Soroban-sub-rosa is a protocol and integration stack, not only a hosted application:
 
 - a Soroban sealed-round contract with on-chain Drand BLS12-381 verification;
 - a public TypeScript SDK with high-level partner templates;
 - a tlock package for deterministic time-locked payloads;
 - a permissionless keeper for reveal and settlement;
-- a hosted pilot UI with public lifecycle receipts (standalone frontend at [sub-rosa-frontend](../sub-rosa-frontend)).
+- a hosted pilot UI with public lifecycle receipts (standalone frontend at [Soroban-sub-rosa Frontend](../sub-rosa-frontend)).
 
 The project is licensed under [MIT](./LICENSE).
 
@@ -65,14 +65,14 @@ The hosted demo may be configured to testnet for safe pilots; its active network
 is shown in the UI. Mainnet support is available through the explicit SDK and
 deployment configuration documented below.
 
-## Why Sub Rosa
+## Why Soroban-sub-rosa
 
 Many applications need a fair private decision before they can safely execute
 an on-chain action. A public mempool exposes quotes too early; a trusted
 operator can change the outcome; a normal database cannot prove that every
 participant saw the same reveal boundary.
 
-Sub Rosa provides the confidential competition primitive while leaving the rest
+Soroban-sub-rosa provides the confidential competition primitive while leaving the rest
 of the workflow with the integrating application. It is designed to sit inside
 existing Stellar products rather than replace their discovery, identity,
 selection, payment, or escrow systems.
@@ -146,7 +146,7 @@ manually. Live mode uses the existing Core v2 `ReceiptOnly` lifecycle; sample
 mode is clearly separated local data.
 
 Offer-Hub keeps marketplace discovery, profiles, subscriptions, eligibility,
-selection, and payment. Sub Rosa supplies only private proposal submission,
+selection, and payment. Soroban-sub-rosa supplies only private proposal submission,
 deadline reveal, and receipt evidence. This is a pilot workflow, not a claim
 that Offer-Hub has deployed a production integration. See
 [the pilot boundary and setup guide](./docs/pilots/OFFER_HUB_PILOT.md).
@@ -169,7 +169,7 @@ The pilot adds a lightweight `ReceiptOnly` competition between fixture-backed,
 clearly labeled OpenX402-style discovery and a typed x402 payment handoff.
 Providers bind private offers to discovered resource digests; after reveal, the
 application validates the offers against the buyer's spending cap and selects
-the lowest valid quote. Sub Rosa records no economic winner and moves no
+the lowest valid quote. Soroban-sub-rosa records no economic winner and moves no
 payment asset.
 
 The OpenX402 selected-quote-to-payment interface is not yet implemented or
@@ -257,7 +257,7 @@ flow.
 
 The application must use the contract, RPC, and network passphrase for the
 same network. Contract escrow and lot custody are separate from network fees.
-Sub Rosa does not subsidize SDK calls by default; an application can add a
+Soroban-sub-rosa does not subsidize SDK calls by default; an application can add a
 relayer if it explicitly wants sponsored fees, in which case that relayer pays.
 
 Repository deployment and capped smoke scripts require an explicit
@@ -337,7 +337,7 @@ contract ID. Evidence: `artifacts/reveal-policy-v3/testnet/deployment.json` and
 
 ## Security boundary and current limits
 
-Sub Rosa reduces early information leakage and makes the reveal boundary
+Soroban-sub-rosa reduces early information leakage and makes the reveal boundary
 verifiable. It does not provide identity, KYC, legal enforceability, business
 underwriting, or a guaranteed keeper service.
 
