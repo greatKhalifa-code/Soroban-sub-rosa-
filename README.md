@@ -11,6 +11,7 @@ receipt for an off-chain decision.
 
 <p align="center">
   <a href="https://www.sub-rosa.online/">Live app</a> |
+  <a href="../sub-rosa-frontend">Frontend Repository</a> |
   <a href="https://www.sub-rosa.online/#/pilot/the-signal">Testnet pilot / deal flow</a> |
   <a href="https://www.sub-rosa.online/#/docs">Hosted docs</a> |
   <a href="./docs/INSTAWARDS_COMPLETION.md">Instawards evidence</a> |
@@ -25,7 +26,7 @@ Sub Rosa is a protocol and integration stack, not only a hosted application:
 - a public TypeScript SDK with high-level partner templates;
 - a tlock package for deterministic time-locked payloads;
 - a permissionless keeper for reveal and settlement;
-- a hosted pilot UI with public lifecycle receipts.
+- a hosted pilot UI with public lifecycle receipts (standalone frontend at [sub-rosa-frontend](../sub-rosa-frontend)).
 
 The project is licensed under [MIT](./LICENSE).
 
